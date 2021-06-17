@@ -1,0 +1,24 @@
+{%extends 'base.html'%} {%block content%}
+<main class="main-content">
+  <div class="container">
+    <div class="page">
+      <!-- .row -->
+      <div class="row mx-auto">
+        {%if movies%} {%for movie in movies%}
+        <div class="col-sm-6 col-md-3">
+          <div class="latest-movie">
+            <a href="{{movie.get_url}}"
+              ><img src="{{movie.movie_poster_link}}" alt="Movie 3"
+            /></a>
+          </div>
+        </div>
+        {%endfor%} {%else%}
+        <h2>No Movie Found</h2>
+        {%endif%}
+      </div>
+      <!-- .row -->
+    </div>
+  </div>
+  <!-- .container -->
+</main>
+{%endblock content%}

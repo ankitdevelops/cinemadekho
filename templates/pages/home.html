@@ -1,0 +1,51 @@
+{%extends 'base.html'%} {%block content%}
+<main class="main-content">
+  <div class="container">
+    <div class="page">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="slider">
+            <ul class="slides">
+              {%for slider in sliders%}
+              <li>
+                <a href="{{slider.banner_link}}" target="_blank"
+                  ><img src="{{slider.banner_image_link}}" alt="Slide 1"
+                /></a>
+              </li>
+              {%endfor%}
+              <!-- <li>
+                <a href="#"
+                  ><img
+                    src="https://i2.wp.com/wikiwiki.in/wp-content/uploads/2021/05/The-Family-Man-2-Amazon-Prime.jpg?fit=1280%2C720&ssl=1"
+                    alt="Slide 2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="https://img.youtube.com/vi/vHiLZkR6rSg/maxresdefault.jpg"
+                    alt="Slide 3"
+                /></a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- .row -->
+      <div class="row mx-auto">
+        {%for movie in movie_link%}
+        <div class="col-sm-6 col-md-3">
+          <div class="latest-movie">
+            <a href="{{movie.get_url}}"
+              ><img src="{{movie.movie_poster_link}}" alt="Movie 3"
+            /></a>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+      <!-- .row -->
+    </div>
+  </div>
+  <!-- .container -->
+</main>
+{%endblock content%}
