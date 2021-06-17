@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-tt^t@sa4jh&@wz1+7fpnff=$=yx*gpn!3*_i-o-gcn1r(_vd-t
 DEBUG = False
 
 ALLOWED_HOSTS = ['moviedekhlo.herokuapp.com']
-
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -88,6 +88,8 @@ WSGI_APPLICATION = 'moviedekho.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #for development
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -96,6 +98,8 @@ WSGI_APPLICATION = 'moviedekho.wsgi.application'
 # }
 
 #for production
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -106,6 +110,9 @@ DATABASES = {
         'PORT': env('POSTGRES_PORT'),
     }
 }
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
