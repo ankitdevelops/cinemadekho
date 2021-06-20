@@ -6,10 +6,17 @@
       <div class="row mx-auto">
         {%if movies%} {%for movie in movies%}
         <div class="col-sm-6 col-md-3">
-          <div class="latest-movie">
-            <a href="{{movie.get_url}}"
-              ><img src="{{movie.movie_poster_link}}" alt="Movie 3"
-            /></a>
+          <div class="card" style="width: 100%; border: none">
+            <a href="{{movie.get_url}}">
+              <img
+                class="card-img-top"
+                src="{{movie.movie_poster_link}}"
+                alt="Card image cap"
+              />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title text-center">{{movie.movie_name}}</h3>
+            </div>
           </div>
         </div>
         {%endfor%} {%else%}

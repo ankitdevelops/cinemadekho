@@ -36,7 +36,7 @@
         {%for movie in movie_link%}
         <div class="col-sm-6 col-md-3">
           <div class="card" style="width: 100%; border: none">
-            <a href="">
+            <a href="{{movie.get_url}}">
               <img
                 class="card-img-top"
                 src="{{movie.movie_poster_link}}"
